@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+
+.marquee__text {
+  font-family: 'League Gothic', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.home__description {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home__description--welcome {
+    font-size: 60px;
+    margin-bottom: 30px;
+    margin-top: 110px;
+}
+
+.home__description--text {
+    font-size: 45px;
+    flex-wrap: wrap;
+    max-width: 700px;
+    text-align: center;
+    margin-bottom: 200px;
+    margin-top: 60px;
+}
+
+/*
+
+  BACKGROUND
+
+*/
+
+.overlay[data-v-390ceb08] {
+    background-image: url('../assets/marquee.jpg');
+    background-repeat: no-repeat;
+    background-position: center -80px;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    height: auto;
+}
+
+.overlay[data-v-390ceb08]:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none
+}

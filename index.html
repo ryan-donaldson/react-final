@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ryan Donaldson JS Final</title>
+  <script src="https://kit.fontawesome.com/c01a776ec2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <section>
+    <nav>
+      <div class="nav__container">
+        <img class="logo" src="./assets/logo-bg-removed.png" alt="">
+        <ul class="nav__links">
+          <li><a href="#" class="nav__link">Home</a></li>
+          <li><a href="#" class="nav__link">Browse Movies</a></li>
+          <li><a href="#" class="nav__link nav__link--primary">Contact</a></li>
+        </ul>
+      </div>
+      <div class="search__container">
+        <div class="search__wrapper">
+          <input id="searchMovieId" class="searchMovies" type="text" placeholder="Search by Title" onkeydown="searchKeyDown(event)">
+          <div class="input__wrap">
+            <i className="fa-solid fa-magnifying-glass" onclick="searchClick()"></i>
+          </div>
+        </div>
+      </div>
+      <div data-v-390ceb07="" class="overlay"></div>
+    </nav>
+  </section>
+  <section class="search__results">
+      <div class="search__results--container">
+        <div class="row">
+          <div class="movies__header">
+            <h2 class="section__title movies__header--title">
+              Search Results:
+            </h2>
+            <select id="filter" onchange="filterMovies(event)">
+              <option value="" disabled selected>Sort</option>
+              <option value="A_TO_Z">A to Z</option>
+              <option value="Z_TO_A">Z to A</option>
+              <option value="NEWEST_TO_OLDEST">Newest to Oldest</option>
+              <option value="OLDEST_TO_NEWEST">Oldest to Newest</option>
+            </select>
+          </div>
+          <div class="movies">
+  
+          </div>
+        </div>
+      </div>
+    </section>
+<script src="./index.js"></script>
+<footer>
+    <div class="container">
+      <div class="row footer__row">
+        <figure>
+          <img class="footer__logo--img" src="./assets/logo-bg-removed.png" alt="">
+        </figure>
+        <div class="footer__social--list">
+          <a href="#" target="_blank" class="
+            footer__social--link
+            link__hover-effect
+            link__hover-effect--white
+            ">
+            GitHub
+          </a>
+          <a href="#" target="_blank" class="
+            footer__social--link
+            link__hover-effect
+            link__hover-effect--white
+            ">
+            LinkedIn
+          </a>
+          <a href="#" class="
+            footer__social--link
+            link__hover-effect
+            link__hover-effect--white
+            ">
+            Contact
+        </div>
+        <div class="footer__copyright">Copyright &copy; 2026 Ryan Donaldson</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
