@@ -5,7 +5,7 @@ import MovieDetails from "./pages/MovieDetails.jsx";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/react-final">
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />}></Route>
