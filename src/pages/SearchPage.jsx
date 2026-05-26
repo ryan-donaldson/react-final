@@ -35,9 +35,13 @@ function SearchPage() {
     setLoading(false);
   }
 
+  function getYear(movie) {
+    return parseInt(movie.Year) || 0;
+  }
+
   function handleFilterChange(filterValue) {
     setFilter(filterValue);
-    setSortVersion(v => v + 1);
+    setSortVersion((v) => v + 1);
 
     const sorted = [...movies];
 
@@ -46,30 +50,29 @@ function SearchPage() {
     } else if (filterValue === "Z_TO_A") {
       sorted.sort((a, b) => b.Title.localeCompare(a.Title));
     } else if (filterValue === "NEWEST_TO_OLDEST") {
-      sorted.sort((a, b) => b.Year - a.Year);
+      sorted.sort((a, b) => getYear(b) - getYear(a));
     } else if (filterValue === "OLDEST_TO_NEWEST") {
-      sorted.sort((a, b) => a.Year - b.Year);
+      sorted.sort((a, b) => getYear(a) - getYear(b));
     }
 
     setMovies(sorted);
   }
 
   useEffect(() => {
-  async function load() {
-    if (search) {
-      setLoading(true);
-      const results = await getMovies(search);
-      setMovies(results);
-      setLoading(false);
+    async function load() {
+      if (search) {
+        setLoading(true);
+        const results = await getMovies(search);
+        setMovies(results);
+        setLoading(false);
+      }
     }
-  }
-  load();
-}, [search]);
-
+    load();
+  }, [search]);
 
   return (
     <>
-      <Nav variant="search"/>
+      <Nav variant="search" />
       <SearchBar onSearch={handleSearch} initialValue={search} />
       <SearchResults
         movies={movies}

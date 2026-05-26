@@ -118,6 +118,10 @@ button:active {
   font-size: 50px;
 }
 
+.nav__links .fa-bars {
+  display: none;
+}
+
 /* Search */
 
 .nav__search {
@@ -157,4 +161,72 @@ button:active {
 .back__arrow .fa-arrow-left {
   color: white;
   font-size: 35px;
+}
+
+
+/* RESPONSIVENESS */
+
+@media (max-width: 768px) {
+  .nav__container {
+    max-height: 50px;
+  }
+  .nav__home--title h1 {
+    display: none;
+  }
+
+  .back__arrow .fa-arrow-left {
+    font-size: 20px;
+    padding-left: 8px;
+  }
+
+  .nav__links {
+    display: none;
+  }
+
+  .nav__menu-icon {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+  }
+
+  .mobile__menu {
+    display: flex;
+    gap: 16px;
+    background: #111;
+    padding: 20px;
+    border-radius: 8px;
+    top: 0;
+    z-index: 999;
+    position: absolute;
+    top: 0px;
+    right: 36px;
+  }
+
+  .mobile__menu .nav__link {
+    font-size: 20px;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .mobile__menu .nav__link {
+    font-size: 12px;
+  }
+
+  .mobile__menu {
+    max-height: 20px;
+    padding: 12px;
+    gap: 0;
+    background: none;
+    margin-right: 6px;
+  }
+
+  .nav__link--primary {
+    border: none;
+  }
+
+  .logo {
+    width: 64px;
+  }
 }
